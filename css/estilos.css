@@ -1,0 +1,174 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', system-ui; /* Troque por uma fonte mais moderna, como Roboto ou Montserrat */
+    background: #0a0a0a; /* Um tom de preto ainda mais profundo para um look tech */
+    color: #d7d7d7;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font-size: 0.95em; /* Uma fonte menor para parágrafos longos facilita a leitura */
+}
+
+.container {
+    flex: 1; /* Adicionado para garantir que o container principal empurre o rodapé para baixo */
+    width: 80%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.logo {
+    font-size: 1em; /* Ou o tamanho que preferir */
+    font-weight: bold; /* Ou 'normal' se quiser mais discreto */
+    color: #4CAF50; /* Ou qualquer cor que se destaque no fundo escuro */
+    position: fixed; /* Mantém o logotipo no lugar ao rolar a página */
+    top: 10px; /* Distância do topo da página */
+    left: 10px; /* Distância do lado esquerdo da página */
+    z-index: 1000; /* Garante que o logotipo fique acima de outros elementos */
+    transition: opacity 0.3s ease; /* Adiciona transição suave para a opacidade */
+}
+
+.hide-logo {
+    opacity: 0; /* Torna o logotipo totalmente transparente */
+    pointer-events: none; /* Impede que o logotipo seja clicável quando invisível */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+    color: #0f550a; /* Muda a cor ao passar o mouse */
+}
+
+
+
+h1 {
+    font-size: 2.5em; /* Aumenta o tamanho do seu nome */
+    color: #4CAF50; /* Cor que se destaca no fundo escuro */
+    text-shadow: 1px 1px 2px #000; /* Sombra de texto sutil */
+    margin-bottom: 0.5em; /* Espaçamento após o nome */
+}
+
+p.introduction {
+    font-size: 1.2em;
+    font-style: italic; /* Estilo itálico para a introdução */
+    color: #ccc; /* Cor mais suave */
+    margin-bottom: 1em; /* Espaçamento após a introdução */
+}
+
+p.description {
+    font-size: 1em; /* Tamanho padrão para o texto */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    color: #ddd; /* Cor que é fácil de ler, mas não muito brilhante */
+    max-width: 800px; /* Largura máxima para o texto não ficar muito estendido */
+    margin: auto; /* Centraliza se houver largura máxima */
+}
+
+h1:hover {
+    color: #0f550a; /* Muda a cor quando o mouse passa por cima */
+    text-decoration-color: #4CAF50; /* Cor da sublinha */
+    transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+
+
+.estilo-padrao-button {
+    display: inline-block;
+    background-color: #057e40; /*0077B5*/
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Suaviza a transição de cor ao passar o mouse */
+}
+
+.estilo-padrao-button:hover {
+    background-color: #057e3f68; /* Escurece o botão ao passar o mouse */
+}
+
+.estilo-button {
+    display: inline-block;
+    background-color: #32323294; /*0077B5*/
+    color: #ffffffc5;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: background-color 0.3s; /* Suaviza a transição de cor ao passar o mouse */
+}
+
+.estilo-button:hover {
+    background-color: #00ff7b68; /* Escurece o botão ao passar o mouse */
+    color: #ffffff;
+
+}
+
+
+
+
+#expertise {
+    background-color: #090909; /* Um fundo mais escuro para destacar o bloco */
+    color: #d7d7d7;
+    padding: 20px;
+    margin: 40px 0;
+    border-left: 5px solid #4CAF50; /* Adiciona um toque de cor */
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil para adicionar profundidade */
+}
+
+#expertise h2 {
+    font-size: 1.75em;
+    color: #4CAF50; /* Cor de destaque para títulos */
+    margin-bottom: 15px;
+}
+
+#expertise p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+#expertise {
+    /* estilos iniciais de #expertise */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Corrigido para incluir todas as propriedades */
+}
+
+#expertise:hover {
+    background-color: #000000; /* Uma variação sutil ao passar o mouse */
+    transform: translateY(-5px); /* Efeito de 'levitar' sutil */
+    box-shadow: 0 8px 16px rgba(0, 255, 0, 0.2); /* Sombra mais proeminente ao passar o mouse */
+}
+
+
+.custom-link:link, .custom-link:visited {
+    color: #707070;
+    text-decoration: none;
+}
+
+.custom-link:hover, .custom-link:focus {
+    color: #4CAF50;
+}
+
+
+#expertise p.code {
+    font-family: 'Courier New', monospace; /* Fonte monoespaçada para código */
+    background-color: #0a0a0a; /* Fundo diferenciado para blocos de código */
+    border-left: 3px solid #4CAF50; /* Barra lateral para destacar código */
+    padding: 5px 10px; /* Preenchimento interno para blocos de código */
+    display: block; /* Faz o parágrafo se comportar como um bloco */
+    overflow-x: auto; /* Permite rolagem horizontal se o código for muito longo */
+    margin-bottom: 10px; /* Espaçamento abaixo do bloco de código */
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #707070;
+    text-align: center; 
+    padding: 20px 0;
+    font-size: 1em;
+    position: relative; /* Mudado de absolute para relative */
+    width: 100%;
+    bottom: 0;
+    clear: both; /* Pode ajudar a limpar floats caso esteja usando */
+}

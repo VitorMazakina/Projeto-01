@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto 01 de Vitor Hideki Mazakina</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header class="logo">🆅🅷🅼</header>
+        <h1>Projeto 01 </h1>
+        <h1>Extração de dados com Python e Selenium.</h1>
+        <p> </p>
+        <p>
+            Este projeto representou uma oportunidade inicial para aprimorar minhas habilidades em programação Python, 
+            especificamente no campo de Web Scraping, que envolve a extração de dados de websites utilizando o protocolo de 
+            Transferência de Hipertexto (HTTP) ou através de navegadores automatizados. O projeto foi realizado com o uso das bibliotecas Selenium e Pandas, 
+            proporcionando uma abordagem robusta para navegar e extrair dados de forma eficiente.
+        </p>
+        <p>
+            Vale ressaltar a conformidade com a Lei Geral de Proteção de Dados (LGPD).
+            Por este motivo que a implementação de práticas éticas de coleta de dados, garantindo que todas as informações fossem adquiridas legalmente
+            com o consentimento explícito dos usuários, sempre que aplicável, e armazenadas de maneira segura. Portanto, irei utilizar sites demonstrativos com informações
+            públicas para a demonstração de uma extração de dados.
+        </p>
+        <p>
+            A habilidade de integrar as práticas de Web Scraping com as exigências da LGPD não apenas reforçou a segurança e a ética do processo de coleta de dados, 
+            mas também aumentou a relevância e a aplicabilidade dos dados extraídos em ambientes regulados. Este projeto foi fundamental para desenvolver uma compreensão 
+            profunda tanto das técnicas técnicas quanto das responsabilidades legais associadas ao Web Scraping na era da proteção de dados.
+        </p>
+        
+
+    <section id="expertise">
+        <h2>Exemplo prático com Python e Selenium.</h2>
+        <p>No Script abaixo mostra as principais funções da biblioteca:</p>
+        <p class="code"><font color="#006400"> #Importações:</font> <br>
+            from selenium import webdriver<br>
+            from selenium.webdriver.support.wait import WebDriverWait<br>
+            from selenium.webdriver.support import expected_conditions as EC<br>
+            from selenium.webdriver.common.by import By
+        </p>
+        
+        <p class="code">
+            driver = webdriver.Chrome() <font color="#006400"> # Aqui especificamente estamos abrindo o Chrome.</font><br>
+            driver.get("https://www.folha.uol.com.br/") <font color="#006400"> # Em seguida a função '.get' para ir até uma URL.</font><br>
+            driver.maximize_window() <font color="#006400"> # Por último maximizando a tela para obter um melhor carregameto de toda a HTML do site.</font>
+        </p>
+
+        <p class="code">
+            <font color="#006400"> """ Opção01: Podemos pegar somente a primeira notícia que está no topo da página:"""</font> <br>
+            principal_noticia = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.TAG_NAME,"h2"))) <br>
+            print(principal_noticia.text)
+        </p>
+
+        <p class="code">
+            <font color="#006400"> """ Opção02: Podemos extrair todas as noticias da página usando o presence_of_all_elements_located:""" </font><br>
+            principais_noticias = WebDriverWait(driver,10).until(EC.presence_of_all_elements_located((By.TAG_NAME,"h2"))) <br>
+            for noticia in principais_noticias: <br>
+            print(noticia.text)
+        </p>
+    </section>
+<!-- ...restante do conteúdo... -->
+    </div>
+
+    <footer>
+        <p>© Para saber mais sobre meus projetos reais, entre em contato comigo no meu perfil <a class="custom-link" href="https://www.linkedin.com/in/vitor-hideki-521756221/">VHM.</a></p>
+    </footer>   
+
+    <script src="js/script.js"></script>
+</body>
+</html>
